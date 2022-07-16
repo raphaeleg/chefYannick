@@ -4,8 +4,10 @@ import React from 'react';
 import '../App.css';
 import { HealthFluff, HealthListV2 } from '../TextInfo';
 import HealthBlock from '../components/HealthBlock';
+import HealthRecipe from '../components/HealthRecipe.js';
 
 const Health = () => {
+
     return (
         <div className='container_pages'>
             <span>
@@ -13,7 +15,7 @@ const Health = () => {
                     <h1 className='title_exp'>You are what you eat</h1>
                     <p className='healthDesc'>{HealthFluff}</p>
                 </div>
-                <div className='container_exp'>
+                <div>
                     <span className='hth_li supplier'>
                         {HealthListV2.map( ( item, index ) => {
                             return (
@@ -24,8 +26,9 @@ const Health = () => {
                         } )}
                     </span>
                 </div>
-            </span>
-        </div>
+                <HealthRecipe />
+            </span >
+        </div >
     );
 };
 

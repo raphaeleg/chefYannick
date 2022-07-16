@@ -64,14 +64,14 @@ h4 {
 p,
 li {
 	font-weight: 300;
-	font-size: 0.875rem;
+	font-size: 1rem;
 	letter-spacing: 0.036em;
 	color: var(--gray);
 	/* text-align: justify; */
 }
 
 p {
-	line-height: 1.5em;
+	line-height: 1.75em;
 }
 
 a {
@@ -129,7 +129,7 @@ a:hover {
 	margin-inline: 0.5rem;
 	height: 2.5vh;
 	list-style: none;
-	width: 12rem;
+	width: 14rem;
 	text-align: center;
 }
 
@@ -691,7 +691,7 @@ a:hover {
 .hth_li {
 	display: grid;
 	grid-template-columns: repeat(2, 35vw);
-	grid-template-rows: 60vh;
+	grid-template-rows: 65vh;
 	margin-top: 50px;
 }
 
@@ -720,6 +720,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	margin: 10px;
+
 }
 
 .hth_header {
@@ -735,7 +736,6 @@ a:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-bottom: 25px;
 }
 
 .wrapper {
@@ -768,6 +768,63 @@ a:hover {
 	max-height: 85%;
 }
 
+.recipeGrid {
+	display: grid;
+	grid-template-columns: repeat(5, 15vw);
+	grid-template-rows: repeat(3, auto);
+	margin: 5vh 0;
+}
+
+.recipeDayBlock {
+	border: solid;
+}
+
+.recipeDay {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.recipeBlock {
+	padding: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 25vh;
+}
+
+.recipeBlock:hover p,
+.recipeActive p {
+	color: var(--blue);
+	cursor: pointer;
+}
+
+.annotateP {
+	color: black;
+	font-size: 0.85rem;
+	line-height: 0.3rem;
+	font-style: italic;
+	justify-self: flex-start;
+}
+
+.recipeDish {
+	justify-self: center;
+	max-width: 75vw;
+}
+
+.recipeDisplay {
+	display: flex;
+	width: 75vw;
+	margin-bottom: 40px;
+}
+
+.recipeDisplay span {
+	margin: 20px;
+	min-width: 30vw;
+}
+
 @media (max-width: 1300px) {
 	.hth_header {
 		margin-bottom: 0;
@@ -788,6 +845,32 @@ a:hover {
 
 	.main_wrapper {
 		max-height: 100%;
+	}
+
+	.recipeGrid {
+		display: flex;
+		flex-direction: column;
+		width: 80vw;
+	}
+
+	.healthRecipeContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	.recipeBlock {
+		height: auto;
+		padding: 10px
+	}
+
+	.recipeDisplay {
+		flex-direction: column;
+	}
+
+	.recipeDisplay span {
+		width: 80vw;
 	}
 }
 
@@ -863,6 +946,10 @@ a:hover {
 	margin: 2rem;
 	min-width: 40vw;
 	text-align: center;
+}
+
+.menu_set_container p {
+	line-height: 1rem;
 }
 
 .guestChefs {
