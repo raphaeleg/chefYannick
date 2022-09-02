@@ -793,7 +793,7 @@ a:hover {
 	align-items: center;
 	flex-direction: column;
 	height: 25vh;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 .recipeBlock:hover p,
